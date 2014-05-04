@@ -1,3 +1,5 @@
 <% provide(:title, 'Random Product') %>
-<h1>Random product <%= $random %></h1>
-
+<h1>Random product <%= $title %></h1>
+<p>$<%= $price %></p>
+<img src="<%= $bigImage %>" width="50%" />
+<%= link_to "View on Etsy", $link, :target => "_blank" %>
