@@ -1,6 +1,13 @@
 RandomEtsy::Application.routes.draw do
+
   root 'static_pages#home'
-  match '/random',        to: 'products#random',               via: 'get' 
+  match '/categories',    to: 'categories#list',            via: 'get' 
+  match '/Woodworking',   to: 'products#Woodworking',       via: 'get'
+  match '/Jewelry',           to: 'products#Jewelry',       via: 'get'
+  match '/Pets',           to: 'products#Pets',       via: 'get'
+  match '/Art',           to: 'products#Art',               via: 'get'
+  match '/Toys',           to: 'products#Toys',             via: 'get'
+  match '/Accessories',        to: 'products#Accessories',            via: 'get' 
   match '/contact',       to: 'static_pages#contact',       via: 'get'
   match '/about',         to: 'static_pages#about',         via: 'get'
   

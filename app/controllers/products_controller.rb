@@ -1,25 +1,52 @@
 class ProductsController < ApplicationController
-	def random
-		require 'open-uri'
-		require 'json'
-		$prodId= Array.new
-		prod_hash= JSON.parse(open("https://openapi.etsy.com/v2/listings/active?api_key=vbnyg7rw8596htzyvf1lpm2n&limit=1&category=art").read)
-		prod_hash["results"].each do |results|
-			$prodId.push(results["listing_id"])
-		end
-
-
-
-		my_hash = JSON.parse(open("https://openapi.etsy.com/v2/listings/#{$prodId.sample}?api_key=vbnyg7rw8596htzyvf1lpm2n&includes=MainImage").read)
+	require 'open-uri'
+	require 'json'
+	def Accessories
 		
-		my_hash["results"].each do |results|
-			$title = results["title"]
-			$price = results["price"]
-			$link = results["url"]
-			$bigImage = results["MainImage"]["url_fullxfull"]
-			results["MainImage"].first do |results|
-				$bigImage = results["listing_id"]
-			end
-		end
+		$prodId= Array.new
+		@product = Accessories.order("RANDOM()").first
+		$productId = @product.productId		
+		my_hash = JSON.parse(open("https://openapi.etsy.com/v2/listings/#{$productId}?api_key=vbnyg7rw8596htzyvf1lpm2n&includes=MainImage").read)
+		showProd(my_hash)
+	end
+	def Art
+		$prodId= Array.new
+		@product = Art.order("RANDOM()").first
+		$productId = @product.productId		
+		my_hash = JSON.parse(open("https://openapi.etsy.com/v2/listings/#{$productId}?api_key=vbnyg7rw8596htzyvf1lpm2n&includes=MainImage").read)
+		showProd(my_hash)
+		
+	end
+	def Toys
+		$prodId= Array.new
+		@product = Toys.order("RANDOM()").first
+		$productId = @product.productId		
+		my_hash = JSON.parse(open("https://openapi.etsy.com/v2/listings/#{$productId}?api_key=vbnyg7rw8596htzyvf1lpm2n&includes=MainImage").read)
+		showProd(my_hash)
+		
+	end
+	def Jewelry
+		$prodId= Array.new
+		@product = Jewelry.order("RANDOM()").first
+		$productId = @product.productId		
+		my_hash = JSON.parse(open("https://openapi.etsy.com/v2/listings/#{$productId}?api_key=vbnyg7rw8596htzyvf1lpm2n&includes=MainImage").read)
+		showProd(my_hash)
+		
+	end
+	def Woodworking
+		$prodId= Array.new
+		@product = Woodworking.order("RANDOM()").first
+		$productId = @product.productId		
+		my_hash = JSON.parse(open("https://openapi.etsy.com/v2/listings/#{$productId}?api_key=vbnyg7rw8596htzyvf1lpm2n&includes=MainImage").read)
+		showProd(my_hash)
+		
+	end
+	def Pets
+		$prodId= Array.new
+		@product = Pets.order("RANDOM()").first
+		$productId = @product.productId		
+		my_hash = JSON.parse(open("https://openapi.etsy.com/v2/listings/#{$productId}?api_key=vbnyg7rw8596htzyvf1lpm2n&includes=MainImage").read)
+		showProd(my_hash)
+		
 	end
 end
