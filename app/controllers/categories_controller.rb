@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   def list
   	if params[:cat] == "yes"
   		$list = params[:list]
-  		pages = [1,2,3,4,5]
+  		@pages = [1,2,3,4,5]
 
 		if $list == "Accessories"
 			pages.each do |i|	

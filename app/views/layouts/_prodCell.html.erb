@@ -1,4 +1,8 @@
-<h1>Random product <%= $title %></h1>
+<h1><%= $title %></h1>
 <p>$<%= $price %></p>
 <img src="<%= $bigImage %>" width="50%" />
+<% @images.each do |i| %>
+<img src="<%= i %>" width="10%">
+<%end%>
+<p><%= $description %></p>
 <%= link_to "View on Etsy", $link, :target => "_blank" %>
