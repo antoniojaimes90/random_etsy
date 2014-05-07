@@ -1,8 +1,25 @@
-<h1><%=h $title.html_safe %></h1>
-<p>$<%= $price.html_safe %></p>
-<img src="<%= $bigImage %>" width="50%" />
-<% @images.each do |i| %>
-<img src="<%= i %>" width="10%">
-<%end%>
-<p><%= $description.html_safe %></p>
-<%= link_to "View on Etsy", $link, :target => "_blank" %>
+<div id="desc_page">	
+	<div class="row">
+		<div class="col-xs-12 col-sm-7 col-md-7">
+			<img src="<%= $bigImage %>" width="100%" />
+			<% @images.each do |i| %>
+			<img src="<%= i %>" width="10%">
+			<%end%>
+		</div>
+		<div class="col-xs-12 col-sm-5 col-md-5">
+			<h1 ><%=h $title.html_safe %></h1>
+			<p id="price">$<%= $price.html_safe %></p>
+		</div>
+	</div>
+	<div class="panel panel-default">
+	    <div class="panel-heading">
+	      <h3 class="panel-title">Front End</h3> 
+	    </div>
+	    <div class="panel-body">
+	     <p><%= $description.html_safe %></p>
+	    </div>
+	</div>
+	<div id="view_etsy">
+		<%= link_to "View on Etsy", $link, :target => "_blank" %>
+	</div>
+</div>
