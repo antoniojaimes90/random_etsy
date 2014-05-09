@@ -88,9 +88,12 @@ p { font-size: 1.1em; line-height: 1.7em;
       }
   }
   #Random{
-    width: 100%; background-color: $maincolor; padding: 10px 0; color: #fff; text-align: center; font-size: 2em; margin-top: 1em;
-    a{
-      color: #fff; width: 100%; display: block;
-    }
+    width: 100%; background-color: $maincolor; padding: 10px 0; color: #fff; text-align: center; font-size: 2em; margin-top: 1em; cursor: pointer;
+
   }   
+  @media (max-width: 768px) {
+  #Random{
+    position: fixed; width: 100%; left: 0; right: 0; bottom: 0;
+  }
+}
 }

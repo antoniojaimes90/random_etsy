@@ -8,7 +8,7 @@
 		</div>
 		<div class="col-xs-12 col-sm-5 col-md-5">
 			<h1 ><%=h $title.html_safe %></h1>
-			<p id="price">$<%= $price.html_safe %></p>
+			<p id="price">$<%= $price %></p>
 		</div>
 	</div>
 	<div class="panel panel-default">
@@ -22,7 +22,13 @@
 	<div id="view_etsy">
 		<%= link_to "View on Etsy", $link, :target => "_blank" %>
 	</div>
-	<div id="Random">
-		<%= link_to "Random Product", "#" %>
+	<div id="Random" >
+		Random Product
 	</div>
 </div>
+
+<script type="text/javascript">
+	$("#Random").click(function(){
+		location.reload()
+	})
+</script>
