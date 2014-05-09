@@ -82,9 +82,15 @@ p { font-size: 1.1em; line-height: 1.7em;
   #price{font-size: 3em; text-align: center; color: $maincolor ; font-weight: bold;}
   .panel-body{display: none;}
   #view_etsy{
-    width: 100%; background-color: $maincolor; padding: 10px 0; color: #fff; text-align: center; font-size: 2em;
+    width: 100%; background-color: $maincolor; padding: 10px 0; color: #fff; text-align: center; font-size: 2em; margin-top: 1em;
     a{
       color: #fff; width: 100%; display: block;
       }
   }
+  #Random{
+    width: 100%; background-color: $maincolor; padding: 10px 0; color: #fff; text-align: center; font-size: 2em; margin-top: 1em;
+    a{
+      color: #fff; width: 100%; display: block;
+    }
+  }   
 }
