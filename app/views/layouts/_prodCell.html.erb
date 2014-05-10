@@ -1,12 +1,14 @@
 <div id="desc_page">	
 	<div class="row">
-		<div class="col-xs-12 col-sm-7 col-md-7">
+		<div class="col-xs-12">
 			<img src="<%= $bigImage %>" width="100%" />
-			<% @images.each do |i| %>
-			<img src="<%= i %>" width="10%">
-			<%end%>
+			<div id="multiimages" class="col-xs-12">	
+				<% @images.each do |i| %>
+				<img src="<%= i %>" width="10%">
+				<%end%>
+			</div>
 		</div>
-		<div class="col-xs-12 col-sm-5 col-md-5">
+		<div class="col-xs-12 ">
 			<h1 ><%=h $title.html_safe %></h1>
 			<p id="price">$<%= $price %></p>
 		</div>

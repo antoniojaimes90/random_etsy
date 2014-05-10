@@ -1,11 +1,16 @@
 /*variables*/
 $maincolor: #89af56;
+$fancyfont: 'Nixie One';
+$lightgray: #a69d9c;
 /* universal */
 
 html {
   overflow-y: scroll;
 }
 
+body{
+  
+}
 
 section {
   overflow: auto;
@@ -36,20 +41,28 @@ p { font-size: 1.1em; line-height: 1.7em;
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fff;
-
+  color: $lightgray;
+  font-family: $fancyfont;
   letter-spacing: -1px;
  
-  font-weight: bold;
+  font-weight: lighter;
   &:hover {
-    color: #fff;
+    color: $maincolor;
     text-decoration: none;
   }
 }
 
+/* Header */
+.navbar-inverse{
+  background-color: #fff;
+  border-color: $maincolor;
+  .navbar-nav>li>a:hover{ color: #89af56;}
+}
+.navbar-toggle{background-color: #484848}
 
 /* footer stuff */
 #footer {
+  background-color: #fff;
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
@@ -75,28 +88,32 @@ p { font-size: 1.1em; line-height: 1.7em;
 
 /*Description Page */
 #desc_page {
+    background-color: #fff;
+    padding: 1em;
   h1{
     font-size: 2em;
     font-weight: normal;
-    margin: 0;
+    margin: 1em 0;
   }
   .panel-heading{background-color: $maincolor; color: #fff; text-align: center;
     h3{
-      font-size: 2em; 
+      font-size: 2em; cursor: pointer;
     }
   }
-#price{
+  #multiimages{
+    margin-top: 1em;
+  }
+  #price{
     font-size: 3em;
     text-align: center;
     color: $maincolor;
     font-weight: bold;
   }
 
-.panel-body {
+  .panel-body {
     display: none;
   }
-
-#view_etsy {
+  #view_etsy {
     width: 100%;
     background-color: $maincolor;
     padding: 10px 0;
