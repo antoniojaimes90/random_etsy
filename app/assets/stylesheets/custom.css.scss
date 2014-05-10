@@ -74,26 +74,61 @@ p { font-size: 1.1em; line-height: 1.7em;
 }
 
 /*Description Page */
-#desc_page{
-
+#desc_page {
   h1{
-    font-size: 2em; font-weight: normal; margin: 0;
+    font-size: 2em;
+    font-weight: normal;
+    margin: 0;
   }
-  #price{font-size: 3em; text-align: center; color: $maincolor ; font-weight: bold;}
-  .panel-body{display: none;}
-  #view_etsy{
-    width: 100%; background-color: $maincolor; padding: 10px 0; color: #fff; text-align: center; font-size: 2em; margin-top: 1em;
-    a{
-      color: #fff; width: 100%; display: block;
-      }
+  .panel-heading{background-color: $maincolor; color: #fff; text-align: center;
+    h3{
+      font-size: 2em; 
+    }
   }
-  #Random{
-    width: 100%; background-color: $maincolor; padding: 10px 0; color: #fff; text-align: center; font-size: 2em; margin-top: 1em; cursor: pointer;
+#price{
+    font-size: 3em;
+    text-align: center;
+    color: $maincolor;
+    font-weight: bold;
+  }
 
-  }   
-  @media (max-width: 768px) {
-  #Random{
-    position: fixed; width: 100%; left: 0; right: 0; bottom: 0;
+.panel-body {
+    display: none;
   }
-}
+
+#view_etsy {
+    width: 100%;
+    background-color: $maincolor;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 1em;
+    a{
+    color: #fff;
+    width: 100%;
+    display: block;
+    }
+  }
+/* Random Button for bottom of description page */
+#Random {
+    width: 100%;
+    background-color: $maincolor;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 1em;
+    cursor: pointer;
+  }
+  /* sticky button on tablets/phones */
+  @media (max-width: 768px) {
+    #Random {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
 }
