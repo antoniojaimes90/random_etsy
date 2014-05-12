@@ -3,9 +3,9 @@
 		<div class="col-xs-12">
 			<img id="bigimg" src="<%= $bigImage %>" width="100%"  data-image="1" />
 			<div id="imgswitch">
-				<div class="left">
+				<div class="left" id="<%= $img_total %>">
 				</div>
-				<div class="right">
+				<div class="right" id="<%= $img_total %>">
 				</div>
 			</div>
 			<div id="multiimages" class="col-xs-12">	
@@ -45,18 +45,32 @@
 	})
 	
 	$('#multiimages').children('img').click(function(){
-
-		$('[data-image="1"]').attr('src', ($(this).attr('src')))
+		current = $(this).attr('class')
+		$('#bigimg').attr('src', ($(this).attr('src')))
+		$('#bigimg').data('image', current)
 	})
 	$('.right').click(function(){
+		img_total = $(this).attr('id');
 		img = $('#bigimg').data('image')
-		img ++
+		if(img == img_total){
+			img = 1
+		}
+		else{
+			img ++
+		}
+		
 		$('#bigimg').data('image',img)
 		$('#bigimg').attr('src', $('.'+img).attr('src'))
 	})
 	$('.left').click(function(){
+		img_total = $(this).attr('id');
 		img = $('#bigimg').data('image')
-		img --
+		if(img == 1){
+			img = img_total
+		}
+		else{
+			img --
+		}
 		$('#bigimg').data('image',img)
 		$('#bigimg').attr('src', $('.'+img).attr('src'))
 	})
