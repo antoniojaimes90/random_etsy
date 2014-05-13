@@ -37,6 +37,20 @@ h2 {  font-size: 1.2em;  letter-spacing: -1px; margin-bottom: 30px; text-align: 
 p { font-size: 1.1em; line-height: 1.7em;
 }
 
+.btn-default{
+  background: $maincolor;
+  width: 100%;
+  margin: 10px 0;
+  a{
+    color: #fff;
+    width: 100%;
+    display: block;
+  }
+  &:hover{
+    background: $maincolor;
+  }
+}
+
 #logo {
   float: left;
   margin-right: 10px;
