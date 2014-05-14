@@ -37,8 +37,17 @@ h2 {  font-size: 1.2em;  letter-spacing: -1px; margin-bottom: 30px; text-align: 
 p { font-size: 1.1em; line-height: 1.7em;
 }
 
-
-
+/* front page add product */
+#ad_row{
+  clear: both;
+  margin: 4em 0; 
+  .front_ad{
+    text-align: center;
+    .addImg{
+      width: 250px; margin: auto;
+    }
+  }
+}
 #logo {
   float: left;
   margin-right: 10px;

@@ -1,9 +1,44 @@
 <% provide(:title, 'Home') %>
 
-	              
-
-<p class="btn btn-default btn-lg btn-default catbutton "><%= link_to "Toys",  '/Toys' %></p>
-<p class="btn btn-default btn-lg btn-default catbutton"><%= link_to "Art",  '/Art' %></p>
-<p class="btn btn-default btn-lg btn-default catbutton"><%= link_to "Woodworking",  '/Woodworking' %></p>
-<p class="btn btn-default btn-lg btn-default catbutton"><%= link_to "Accessories",  '/Accessories' %></p>
-<p class="btn btn-default btn-lg btn-default catbutton"><%= link_to "Pets",  '/Pets' %></p>
+<div class="col-xs-12 col-sm-6">	             
+	<p class="btn btn-default btn-lg btn-default catbutton "><%= link_to "Toys",  '/Toys' %></p>
+</div>	
+<div class="col-xs-12 col-sm-6">
+	<p class="btn btn-default btn-lg btn-default catbutton"><%= link_to "Art",  '/Art' %></p>
+</div>
+<div class="col-xs-12 col-sm-6">
+	<p class="btn btn-default btn-lg btn-default catbutton"><%= link_to "Woodworking",  '/Woodworking' %></p>
+</div>
+<div class="col-xs-12 col-sm-6">	
+	<p class="btn btn-default btn-lg btn-default catbutton"><%= link_to "Accessories",  '/Accessories' %></p>
+</div>
+<div class="col-xs-12 col-sm-6">
+	<p class="btn btn-default btn-lg btn-default catbutton"><%= link_to "Pets",  '/Pets' %></p>
+</div>
+<div class="clearfix"></div>
+<div id="ad_row" class="clearfix">
+	<div class="col-xs-12 col-sm-6 front_ad ">	  
+		<div class="addImg">
+			<p>
+				<a href="<%= $firstLink %>" target="_blank"><img src="<%= $firstImg %>" border="0" width="250px" height="250px"></a>
+			</p>
+		</div>
+		<div >
+			<p>
+				<a href="<%= $firstLink %>" target="_blank"><%= $firstTitle.html_safe %></a>
+			</p>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-6 front_ad">	  
+		<div class="addImg">
+			<p>
+				<a href="<%= $latLink %>" target="_blank"><img src="<%= $lastImg %>" border="0" width="250px" height="250px"></a>
+			</p>
+		</div>
+		<div>
+			<p>
+				<a href="<%= $lastLink %>" target="_blank"><%= $lastTitle.html_safe %></a>
+			</p>
+		</div>
+	</div>
+</div>
