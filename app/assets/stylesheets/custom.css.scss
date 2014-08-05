@@ -9,7 +9,7 @@ html {
 }
 
 body{
-  
+  background-color: #7A7A7A;
 }
 
 section {
@@ -37,16 +37,28 @@ h2 {  font-size: 1.2em;  letter-spacing: -1px; margin-bottom: 30px; text-align: 
 p { font-size: 1.1em; line-height: 1.7em;
 }
 
-/* front page add product */
+/* front page ad product */
 #ad_row{
   clear: both;
   margin: 4em 0; 
   .front_ad{
     text-align: center;
     .addImg{
-      width: 250px; margin: auto;
+      width: 100%; 
+      img{
+      width: 100%; 
+      }  
     }
+
   }
+}
+.addImg{
+  width: 100%; 
+  text-align: center;
+  background: #fff;
+  img{
+    width: 100%; 
+  }  
 }
 #logo {
   float: left;
@@ -65,8 +77,8 @@ p { font-size: 1.1em; line-height: 1.7em;
 
 /* Header */
 .navbar-inverse{
-  background-color: #fff;
-  border-color: $maincolor;
+  background-color: #7A7A7A;
+  border: none;
   .navbar-nav>li>a:hover{ color: #89af56;}
 }
 .navbar-toggle{background-color: #484848}
@@ -98,9 +110,53 @@ p { font-size: 1.1em; line-height: 1.7em;
 }
 
 /*Description Page */
-#desc_page {
+#next{
+  background: $maincolor;
+  color: #fff; 
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 25px;
+  cursor: pointer;
+}
+#desc_right{
+    background: #fff;
+  }
+.side_col{
+  background-color: #fff;
+  height: 100%;
+  
+}
 
-    background-color: #fff;
+
+.col-md-2{
+  padding: 0;
+  #desc_right{
+    padding: 0;
+  }
+  #desc_left{
+    padding: 0;
+  }
+
+}
+@media (max-width: 768px) { 
+  .col-sm-12{
+  padding-left: 15px;
+  padding-right: 15px;
+  clear: both;
+  }
+}
+
+
+#desc_page {
+  .wht{
+      background-color: #fff
+    }
+  #desc_content{
+    background: #fff;
+    padding: 0;
+  }
+    
     
   h1{
     font-size: 2em;
@@ -205,3 +261,5 @@ p { font-size: 1.1em; line-height: 1.7em;
     background: $maincolor;
   }
 }
+
+

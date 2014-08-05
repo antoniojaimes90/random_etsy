@@ -8,7 +8,9 @@ class ProductsController < ApplicationController
 		$productId = @product.productId		
 		my_hash = JSON.parse(open("https://openapi.etsy.com/v2/listings/#{$productId}?api_key=vbnyg7rw8596htzyvf1lpm2n&fields=title,url,price,description&includes=MainImage").read)
 		showProd(my_hash)
+		$bigImageP = $bigImage
 		multiImg($productId)
+		sponser()
 	end
 	def Art
 		$prodId= Array.new
@@ -16,7 +18,9 @@ class ProductsController < ApplicationController
 		$productId = @product.productId		
 		my_hash = JSON.parse(open("https://openapi.etsy.com/v2/listings/#{$productId}?api_key=vbnyg7rw8596htzyvf1lpm2n&fields=title,url,price,description&includes=MainImage").read)
 		showProd(my_hash)
+		$bigImageP = $bigImage
 		multiImg($productId)
+		sponser()
 	end
 	def Toys
 		$prodId= Array.new
@@ -24,7 +28,9 @@ class ProductsController < ApplicationController
 		$productId = @product.productId		
 		my_hash = JSON.parse(open("https://openapi.etsy.com/v2/listings/#{$productId}?api_key=vbnyg7rw8596htzyvf1lpm2n&fields=title,url,price,description&includes=MainImage").read)
 		showProd(my_hash)
+		$bigImageP = $bigImage
 		multiImg($productId)
+		sponser()
 	end
 	def Jewelry
 		$prodId= Array.new
@@ -32,7 +38,9 @@ class ProductsController < ApplicationController
 		$productId = @product.productId		
 		my_hash = JSON.parse(open("https://openapi.etsy.com/v2/listings/#{$productId}?api_key=vbnyg7rw8596htzyvf1lpm2n&fields=title,url,price,description&includes=MainImage").read)
 		showProd(my_hash)
+		$bigImageP = $bigImage
 		multiImg($productId)
+		sponser()
 	end
 	def Woodworking
 
@@ -41,7 +49,9 @@ class ProductsController < ApplicationController
 		$productId = @product.productId		
 		my_hash = JSON.parse(open("https://openapi.etsy.com/v2/listings/#{$productId}?api_key=vbnyg7rw8596htzyvf1lpm2n&fields=title,url,price,description&includes=MainImage").read)
 		showProd(my_hash)
+		$bigImageP = $bigImage
 		multiImg($productId)
+		sponser()
 		
 	end
 	def Pets
@@ -50,6 +60,8 @@ class ProductsController < ApplicationController
 		$productId = @product.productId		
 		my_hash = JSON.parse(open("https://openapi.etsy.com/v2/listings/#{$productId}?api_key=vbnyg7rw8596htzyvf1lpm2n&fields=title,url,price,description&includes=MainImage").read)
 		showProd(my_hash)
+		$bigImageP = $bigImage
 		multiImg($productId)
+		sponser()
 	end
 end
