@@ -1,6 +1,6 @@
 RandomEtsy::Application.routes.draw do
 
-  root 'static_pages#home'
+  root 'products#Art'
   match '/categories',    to: 'categories#list',            via: 'get' 
   match '/Woodworking',   to: 'products#Woodworking',       via: 'get'
   match '/Jewelry',           to: 'products#Jewelry',       via: 'get'

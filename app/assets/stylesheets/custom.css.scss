@@ -38,19 +38,27 @@ p { font-size: 1.1em; line-height: 1.7em;
 }
 
 /* front page ad product */
-#ad_row{
-  clear: both;
-  margin: 4em 0; 
-  .front_ad{
+
+#SP{
+ position: absolute; bottom: 0; text-align: center; border-top: 1px solid #e0e0e0;
+  a{
+    display: block; width: 100%;
+  }
+}
+
+.front_ad{
+    
     text-align: center;
+    p{
+      height: 2em; 
+      overflow: hidden;
+    }
     .addImg{
       width: 100%; 
       img{
       width: 100%; 
       }  
     }
-
-  }
 }
 .addImg{
   width: 100%; 
@@ -110,6 +118,43 @@ p { font-size: 1.1em; line-height: 1.7em;
 }
 
 /*Description Page */
+
+#categories{
+  ul{
+    list-style: none; padding: 0; margin: 0;
+  }
+  ul li{ 
+    text-align: center; height: 3em; line-height: 3em; font-size: 1.5em; color: #999; border-bottom: 2px solid #e0e0e0;
+  }
+  a{
+    color: #999; text-decoration: none; display: block; width: 100%;
+  }
+}
+
+#desc_left{
+  height: 600px;
+}
+
+#catHead{
+  background: $maincolor;
+  color: #fff; 
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 25px;
+  
+}
+
+#next{
+  background: $maincolor;
+  color: #fff; 
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
 #next{
   background: $maincolor;
   color: #fff; 
@@ -120,6 +165,8 @@ p { font-size: 1.1em; line-height: 1.7em;
   cursor: pointer;
 }
 #desc_right{
+    padding: 20px 0;
+    height: 600px;
     background: #fff;
   }
 .side_col{
@@ -132,7 +179,7 @@ p { font-size: 1.1em; line-height: 1.7em;
 .col-md-2{
   padding: 0;
   #desc_right{
-    padding: 0;
+    padding: 20px 0;
   }
   #desc_left{
     padding: 0;
@@ -189,6 +236,7 @@ p { font-size: 1.1em; line-height: 1.7em;
     text-align: center;
     font-size: 2em;
     margin-top: 1em;
+    margin-bottom: 1em;
     a{
     color: #fff;
     width: 100%;

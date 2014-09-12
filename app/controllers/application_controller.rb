@@ -3,22 +3,31 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  	def showProd(my_hash)
-
-  		my_hash["results"].each do |results|
-			$title = results["title"]
-			$price = results["price"]
+  $Etsy_API = 'vbnyg7rw8596htzyvf1lpm2n'  
+  
+  def showProd(my_hash)
+      
+  	my_hash["results"].each do |results|
+      $title = results["title"]
+      $price = results["price"]
 			$link = results["url"]
 			$description = results["description"]
 			$bigImage = results["MainImage"]["url_fullxfull"]
+      @Cats = [ 'Accessories', 'Art', 'Pets', 'Toys', 'Woodworking' ]
+
 		end
  	end
   
+  def Current(current)
+    $current = current 
+  end  
+
   def sponser
-      @product = Accessories.order("RANDOM()").first(2)
+    
+    @product = Accessories.order("RANDOM()").first(2)
     @ads = Array.new
     @product.each do |i|
-        @ads.push(i.productId)
+      @ads.push(i.productId)
     end
     my_hash = JSON.parse(open("https://openapi.etsy.com/v2/listings/#{@ads.first}?api_key=vbnyg7rw8596htzyvf1lpm2n&fields=title,url,price,description&includes=MainImage").read)
     showProd(my_hash)
@@ -39,5 +48,4 @@ class ApplicationController < ActionController::Base
   			@images.push(results["url_fullxfull"])
   		end
   	end
-
 end
