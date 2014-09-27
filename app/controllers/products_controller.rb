@@ -1,7 +1,15 @@
 class ProductsController < ApplicationController
 	require 'open-uri'
 	require 'json'
-
+	def Etsy(product_Id)
+		$productId = product_Id 
+		my_hash = JSON.parse(open("https://openapi.etsy.com/v2/listings/#{$productId}?api_key=vbnyg7rw8596htzyvf1lpm2n&fields=title,url,price,description&includes=MainImage").read)
+		showProd(my_hash)
+		Current($current)
+		$bigImageP = $bigImage
+		multiImg($productId)
+		sponser()
+	end
 	def Accessories
 		$current = 'Accessories'
 		$prodId= Array.new
@@ -45,13 +53,5 @@ class ProductsController < ApplicationController
 		$productId = @product.productId		
 		Etsy($productId)
 	end
-	def Etsy(product_Id)
-		$productId = product_Id 
-		my_hash = JSON.parse(open("https://openapi.etsy.com/v2/listings/#{$productId}?api_key=vbnyg7rw8596htzyvf1lpm2n&fields=title,url,price,description&includes=MainImage").read)
-		showProd(my_hash)
-		Current($current)
-		$bigImageP = $bigImage
-		multiImg($productId)
-		sponser()
-	end
+	
 end

@@ -1,13 +1,16 @@
 <div class="row">
-	<div id="desc_left" class="col-sm-0 col-md-2">
+	<div id="desc_left" class="col-md-2">
 		<div class="side_col">
-			<div id="next">
+			<div class="col-sm-12" id="smll_menu">
+			 <p id="test" class="testy">CLICK</p>
+			</div>
+			<div id="next" class="col-sm-0">
 				NEXT
 			</div>
-			<div id="current">
+			<div id="current" class="col-sm-0">
 				<h2><%= $current %></h2>
 			</div>
-			<div id="categories">
+			<div id="categories" class="col-sm-0">
 				<div id="catHead">
 					Categories
 				</div>
@@ -51,7 +54,7 @@
 			    </div>
 			</div>
 			<div id="view_etsy">
-				<%= link_to "View on Etsy", $link, :target => "_blank" %>
+				<%= link_to "View on Etsy", $linky, :target => "_blank" %>
 			</div>
 		</div>
 		
@@ -70,7 +73,7 @@
 			</div>
 			<div class="col-xs-12 front_ad">	  
 				<div class="addImg">
-						<a href="<%= $latLink %>" target="_blank"><img src="<%= $lastImg %>" border="0" ></a>
+						<a href="<%= $lastLink %>" target="_blank"><img src="<%= $lastImg %>" border="0" ></a>
 				</div>
 				<div>
 					<p>
@@ -79,12 +82,18 @@
 				</div>
 			</div>
 			<div id="SP" class="col-xs-12">
-				<a href="">Sponsored</a>
+				<%=  link_to 'Advertise', ads_path %>
 			</div>
 		</div>
 	</div>
 </div>
 <script type="text/javascript">
+		
+	$("#test").click(function(){
+		$("#MTop").attr('class', 'gh-svg menu-top menu-ani-top');
+		
+	});
+
 	$("#next").click(function(){
 		location.reload()
 	})

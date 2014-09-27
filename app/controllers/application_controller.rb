@@ -10,13 +10,26 @@ class ApplicationController < ActionController::Base
   	my_hash["results"].each do |results|
       $title = results["title"]
       $price = results["price"]
-			$link = results["url"]
+			$linky = results["url"]
 			$description = results["description"]
 			$bigImage = results["MainImage"]["url_fullxfull"]
       @Cats = [ 'Accessories', 'Art', 'Pets', 'Toys', 'Woodworking' ]
 
 		end
  	end
+
+  def showAd(my_hash)
+      
+    my_hash["results"].each do |results|
+      $titleAd = results["title"]
+      
+      $linkAd = results["url"]
+      
+      $bigImage = results["MainImage"]["url_fullxfull"]
+      
+
+    end
+  end
   
   def Current(current)
     $current = current 
@@ -29,16 +42,16 @@ class ApplicationController < ActionController::Base
     @product.each do |i|
       @ads.push(i.productId)
     end
-    my_hash = JSON.parse(open("https://openapi.etsy.com/v2/listings/#{@ads.first}?api_key=vbnyg7rw8596htzyvf1lpm2n&fields=title,url,price,description&includes=MainImage").read)
-    showProd(my_hash)
-    $firstTitle = $title
+    my_hashF = JSON.parse(open("https://openapi.etsy.com/v2/listings/#{@ads.first}?api_key=vbnyg7rw8596htzyvf1lpm2n&fields=title,url,price,description&includes=MainImage").read)
+    showAd(my_hashF)
+    $firstTitle = $titleAd
     $firstImg   = $bigImage
-    $firstLink  = $link
-    my_hash = JSON.parse(open("https://openapi.etsy.com/v2/listings/#{@ads.last}?api_key=vbnyg7rw8596htzyvf1lpm2n&fields=title,url,price,description&includes=MainImage").read)
-    showProd(my_hash)
-    $lastTitle = $title
+    $firstLink  = $linkAd
+    my_hashL = JSON.parse(open("https://openapi.etsy.com/v2/listings/#{@ads.last}?api_key=vbnyg7rw8596htzyvf1lpm2n&fields=title,url,price,description&includes=MainImage").read)
+    showAd(my_hashL)
+    $lastTitle = $titleAd
     $lastImg  = $bigImage
-    $lastLink  = $link
+    $lastLink  =  $linkAd
   end
   	def multiImg(prodId)
   		@images = Array.new
