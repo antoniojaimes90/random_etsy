@@ -459,7 +459,8 @@ p { font-size: 1.1em; line-height: 1.7em;
   .navbar-nav > li{
     background-color: $maincolor;
   a{
-    padding-top: 10px;
+    padding-top: 10px; 
+    text-decoration: none;
   }
  }
 }
