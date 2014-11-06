@@ -431,35 +431,3 @@ p { font-size: 1.1em; line-height: 1.7em;
     }
 }
 
-/* Media queries */
-@media(max-width: 992px){
-  .container{
-    width: 100%
-  }
-  #desc_page{
-    padding: 0;
-  }
-  #desc_left{
-    height: auto; position: fixed; z-index: 1; width: 100%; bottom: 0;
-  }
-  #desc_right{
-    height: auto;
-    margin-bottom: 75px;
-  }
-  .front_ad{
-    float: none;
-  } 
-}
-@media (max-width: 768px) { 
-  .col-sm-12{
-  padding-left: 15px;
-  padding-right: 15px;
-  clear: both;
-  }
-  .navbar-nav > li{
-    background-color: $maincolor;
-  a{
-    padding-top: 10px;
-  }
- }
-}
