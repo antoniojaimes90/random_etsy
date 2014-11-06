@@ -9,6 +9,7 @@ class StaticPagesController < ApplicationController
   end
 
   def advertisement
+  	@Cats = [ 'Accessories', 'Art', 'Pets', 'Toys', 'Woodworking' ]
   end
 
 end

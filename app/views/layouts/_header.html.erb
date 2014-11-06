@@ -16,7 +16,9 @@
       
       
       <ul class="nav navbar-nav navbar-right col-lg-0" >
-              
+        <% @Cats.each do |i| %>
+			<li><a href="<%= i %>"> <%= i %></a></li>
+		<% end -%>        
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
