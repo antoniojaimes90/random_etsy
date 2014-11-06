@@ -1,18 +1,26 @@
-<div class="navbar navbar-inverse navbar-static-top" role="navigation">
-		 <div class="container">
-		 	<div class="col-sm-12 col-md-0" id="menueq">
-		 		<button id="gh-svg-icons" class="gh-svg-wrapper" aria-controls="#gh-nav-list" aria-expanded="false">
-					
-					<svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" id="MTop" class="gh-svg menu-top" enable-background="new 0 0 96 96">
-						<rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect>
-					</svg>
-					<svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg menu-bottom" enable-background="new 0 0 96 96">
-						<rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect>
-					</svg>
-				</button>
-		 	</div>
-		    <div class="navbar-header">
-		      <span class="navbar-brand"> <img src="assets/logo-dcc0ac7a5b41d68ed1e07a0080e4ad99.png"></span>
-		    </div>		   
-		 </div>
-	</div>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <span class="navbar-brand"> <a href="/"><img src="assets/logo-dcc0ac7a5b41d68ed1e07a0080e4ad99.png"></a></span>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      
+      <ul class="nav navbar-nav navbar-right col-lg-0" >
+        <% @Cats.each do |i| %>
+			<li><a href="<%= i %>"> <%= i %></a></li>
+		<% end -%>        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
