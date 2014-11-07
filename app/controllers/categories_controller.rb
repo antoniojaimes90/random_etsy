@@ -1,5 +1,7 @@
 class CategoriesController < ApplicationController
+  require 'open-uri'
   def list
+  	@Cats = [ 'Accessories', 'Art', 'Pets', 'Toys', 'Woodworking' ]
   	if params[:cat] == "yes"
   		$list = params[:list]
   		@pages = [1,2,3,4,5]
