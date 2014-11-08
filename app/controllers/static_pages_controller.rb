@@ -10,7 +10,12 @@ class StaticPagesController < ApplicationController
 
   def advertisement
   	@Cats = [ 'Accessories', 'Art', 'Pets', 'Toys', 'Woodworking' ]
-    AdMailer.send_ad_email(@seller).deliver
+    if params[:submited] == "yes" 
+      $email = params[:Email] 
+      $name = params[:Name] 
+      $catAd = params[:category] 
+      AdMailer.send_ad_email(@seller).deliver
+    end
   end
 
 end

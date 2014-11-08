@@ -1,12 +1,13 @@
 <% provide(:title, 'Advertisement') %>
 <div id='adForm'>	
 	<h2>Advertisement is in Beta. <br/> To be included in the beta fill out form below.</h2>
-	<form>
+	<form id="theform" method="GET" action="/ads">
 		<label>Name:</label>
 		<input type="text" name="Name" placeholder="Name">
 		<label>Email:</label>
 		<input type="text" name="Email" placeholder="Email">
 		<input id="catInput" type="hidden" name="category"> 
+		<input type="hidden" name="submited" value="yes">
 		<p>Category:</p>
 		<ul>
 			<li id="Art"><span></span>Art</li>
@@ -16,7 +17,7 @@
 			<li id="Wood"><span></span>Woodworking</li>
 			<li id="Other"><span></span>Other</li>
 		</ul>
-		<div id="submitB">SUBMIT</div>
+		<div type="submit" id="submitB">SUBMIT</div>
 
 	</form>
 </div>
@@ -28,5 +29,9 @@
 		$('form span').removeClass('selected')
 		$('#'+testy+' span').addClass('selected')
 		$('#catInput').attr('value', testy)
+	})
+	$('#submitB').click(function(){
+	
+		$('#theform').submit()
 	})
 </script>
