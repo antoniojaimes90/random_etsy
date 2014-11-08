@@ -10,6 +10,7 @@ class StaticPagesController < ApplicationController
 
   def advertisement
   	@Cats = [ 'Accessories', 'Art', 'Pets', 'Toys', 'Woodworking' ]
+    AdMailer.send_ad_email(@seller).deliver
   end
 
 end

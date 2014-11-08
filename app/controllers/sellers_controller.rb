@@ -5,7 +5,7 @@ class SellersController < ApplicationController
   # GET /sellers.json
   def index
     render :file => 'app/views/static_pages/advertisement.html.erb'
-     @Cats = [ 'Accessories', 'Art', 'Pets', 'Toys', 'Woodworking' ]
+    
   end
 
   # GET /sellers/1
