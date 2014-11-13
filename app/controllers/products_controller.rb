@@ -53,5 +53,13 @@ class ProductsController < ApplicationController
 		$productId = @product.productId		
 		Etsy($productId)
 	end
+
+	def Kids
+		$current = 'Kids'
+		$prodId= Array.new
+		@product = Kids.order("RANDOM()").first
+		$productId = @product.productId		
+		Etsy($productId)
+	end
 	
 end

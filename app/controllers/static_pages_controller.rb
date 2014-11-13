@@ -9,7 +9,7 @@ class StaticPagesController < ApplicationController
   end
 
   def advertisement
-  	@Cats = [ 'Accessories', 'Art', 'Pets', 'Toys', 'Woodworking' ]
+  	@Cats = [ 'Accessories', 'Art', 'Pets', 'Kids', 'Toys', 'Woodworking' ]
     if params[:submited] == "yes" 
       $email = params[:Email] 
       $name = params[:Name] 

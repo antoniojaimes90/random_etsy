@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
 			$linky = results["url"]
 			$description = results["description"]
 			$bigImage = results["MainImage"]["url_fullxfull"]
-      @Cats = [ 'Accessories', 'Art', 'Pets', 'Toys', 'Woodworking' ]
+      @Cats = [ 'Accessories', 'Art', 'Kids', 'Pets', 'Toys', 'Woodworking' ]
 
 		end
  	end

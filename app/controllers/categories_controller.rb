@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
   require 'open-uri'
   def list
-  	@Cats = [ 'Accessories', 'Art', 'Pets', 'Toys', 'Woodworking' ]
+  	@Cats = [ 'Accessories', 'Art', 'Kids', 'Pets', 'Toys', 'Woodworking' ]
   	if params[:cat] == "yes"
   		$list = params[:list]
   		@pages = [1,2,3,4,5]
@@ -60,7 +60,17 @@ class CategoriesController < ApplicationController
 								end
 								$updated = "Toys Updated" 
 							else
-								$updated = "No Matches" 
+								if $list == "Kids"
+								@pages.each do |i|	
+									prod_hash= JSON.parse(open("https://openapi.etsy.com/v2/listings/active?api_key=vbnyg7rw8596htzyvf1lpm2n&limit=100&category=#{$list}&page=#{i}").read)
+									prod_hash["results"].each do |results|
+										Kids.create(productId: results["listing_id"])
+									end
+								end
+									$updated = "Kids Updated" 
+								else
+									$updated = "No Matches" 
+								end
 							end
 						end
 					end

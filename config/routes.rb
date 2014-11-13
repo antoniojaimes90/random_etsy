@@ -11,7 +11,7 @@ RandomEtsy::Application.routes.draw do
   match '/contact',       to: 'static_pages#contact',       via: 'get'
   match '/about',         to: 'static_pages#about',         via: 'get'
   match '/ads',           to: 'static_pages#advertisement',  via: 'get'
-  
+  match '/Kids',          to: 'products#Kids',              via: 'get'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
