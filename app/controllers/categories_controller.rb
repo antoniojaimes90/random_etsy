@@ -62,7 +62,7 @@ class CategoriesController < ApplicationController
 							else
 								if $list == "Kids"
 								@pages.each do |i|	
-									prod_hash= JSON.parse(open("https://openapi.etsy.com/v2/listings/active?api_key=vbnyg7rw8596htzyvf1lpm2n&limit=100&category=#{$list}&page=#{i}").read)
+									prod_hash= JSON.parse(open("https://openapi.etsy.com/v2/listings/active?api_key=vbnyg7rw8596htzyvf1lpm2n&limit=100&category=Children&page=#{i}").read)
 									prod_hash["results"].each do |results|
 										Kids.create(productId: results["listing_id"])
 									end
